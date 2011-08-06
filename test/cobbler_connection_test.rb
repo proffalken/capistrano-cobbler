@@ -1,9 +1,9 @@
 require 'test/unit'
-require 'capistrano-cobbler'
+require 'capistranoCobbler'
 
 class TestCobblerConnections < Test::Unit::TestCase
     def test_server_url
-    	cobbler_connection = CapistranoCobbler::new(server='localhost')
-    	assert_raise(GeneralException){'Could not connect to cobbler server on localhost'}
+    	cobbler_connection = CapistranoCobbler.new('localhost')
+    	assert_equal('localhost', cobbler_connection.cblr_server)
     end
 end
