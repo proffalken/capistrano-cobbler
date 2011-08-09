@@ -1,0 +1,8 @@
+CapistranoCobbler
+=================
+
+This recipe for cobbler enables you to use the management classes in cobbler to automatically determine the nodes you will deploy your code to.
+
+Usage instructions will follow once I finish writing the tests... :)
+
+As usual, if it breaks you get to keep both pieces.

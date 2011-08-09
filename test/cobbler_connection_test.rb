@@ -11,4 +11,11 @@ class TestCobblerConnections < Test::Unit::TestCase
     	cobbler_connection = CapistranoCobbler.new('www','localhost')
     	assert_equal('www',cobbler_connection.mgmt_class)
     end
+
+    def test_data_is_retrieved_from_cobbler
+    	cobbler_connection = CapistranoCobbler.new('www','localhost')
+    	servers = cobbler_connection.get_servers
+    	puts servers
+    	assert_equal('testserver',servers[0])
+    end
 end
