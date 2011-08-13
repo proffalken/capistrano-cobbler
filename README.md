@@ -5,15 +5,15 @@ This recipe for cobbler enables you to use the management classes in cobbler to 
 
 Installation is simple:
 
-1. Copy capistranoCobbler.rb from 'lib' to the config directory in your pre-capified project
-2. Update your CapFile as follows:
+* Copy capistranoCobbler.rb from 'lib' to the config directory in your pre-capified project
+* Update your CapFile as follows:
 
 ```ruby
     set :mgmt_class, "www"    
     set :mgmt_server, "localhost"
 ```
 
-3. Update config/deploy.rb (or the appropriate staging file!) with the following:
+* Update config/deploy.rb (or the appropriate staging file!) with the following:
 
 ```ruby
     load 'config/capistranoCobbler'  
@@ -23,7 +23,7 @@ Installation is simple:
     end
 ```
 
-4. Run capistrano as you usually would.
+* Run capistrano as you usually would.
 
 NB: This assumes that you are deploying to a single server.  If you wanted to deplot to multiple servers, simply create additional connections and execute them as part of a "role" block:
 
