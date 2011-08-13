@@ -18,7 +18,7 @@ class CapistranoCobbler
         server_list = Array.new()
         for server_name in servers do 
 	    ok, fqdn = @connection.call2('get_system_for_koan',server_name)
-            server_list << fqdn['interfaces']['eth0']['hostname']
+            server_list << fqdn['hostname']
         end
         
         return server_list
